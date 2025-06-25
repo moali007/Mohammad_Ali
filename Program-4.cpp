@@ -7,12 +7,13 @@ int main() {
     cin >> n;
 
     vector<int> input(n);
-    cout << "Enter " << n << " numbers separated by space:\n";
+    cout << "Enter " << n << " numbers:\n";
     for (int i = 0; i < n; ++i) {
         cin >> input[i];
     }
-    unordered_map<int, int> count;
 
+    int count[10] = {0};
+    
     for (int num : input) {
         for (int i = 1; i <= 9; i++) {
             if (num % i == 0) {
