@@ -2,7 +2,15 @@
 using namespace std;
 
 int main() {
-    vector<int> input = {1, 2, 8, 9, 12, 46, 76, 82, 15, 20, 30};
+    int n;
+    cout << "Enter how many numbers you want to input: ";
+    cin >> n;
+
+    vector<int> input(n);
+    cout << "Enter " << n << " numbers separated by space:\n";
+    for (int i = 0; i < n; ++i) {
+        cin >> input[i];
+    }
     unordered_map<int, int> count;
 
     for (int num : input) {
